@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --blue: #598BDD;
+  --white: #ffffff;
+  --green: #68CA5F;
+  --grey-dark: #AAAAAA;
+  --grey-light: #DEDEDE;
+  --text: #545454;
+  --option-hover: rgb(236, 235, 235);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 25vw;
+  height: auto;
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.nav__button {
+  width: 7px;
+  height: 7px;
+  border-radius: 1000px;
+  background-color: var(--grey-light);
+  cursor: pointer;
+}
+
+.nav__button:nth-child(1) {
+  background-color: var(--grey-dark);
+}
+
+.nav__button:nth-child(2) {
+  margin: 0 0.4rem;
+}
+
+.header {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.06rem;
+}
+
+.options {
+  margin-top: 2rem;
+}
+
+.options .option:nth-of-type(2) > .option__text {
+  color: var(--text);
+}
+
+.option {
+  border-top: 0.09rem solid var(--grey-light);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  padding-left: 2rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: var(--option-hover);
+}
+
+.option__text {
+  font-size: 0.8rem;
+  color: var(--grey-dark);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+}
+
+.options .option__text:nth-of-type(2) {
+  color: var(--text);
+}
+
+.option__icon {
+  width: 2.6rem;
+  margin-right: 1rem;
+}
+
+.actions button {
+  width: 100%;
+  background-color: var(--blue);
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.actions button:active {
+  top: 1px;
+}
+
+.actions button .button__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 1.1rem;
+}
+
+.actions button .button__content img {
+  margin-left: 0.5rem;
+  width: 16px;
+}
